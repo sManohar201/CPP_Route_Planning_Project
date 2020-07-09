@@ -16,14 +16,11 @@ RoutePlanner::RoutePlanner(RouteModel &model, float start_x, float start_y, floa
     std::cout << "End node : " << this->end_node->x << " " << this->end_node->y << "\n";
 }
 
-
-// TODO 3: Implement the CalculateHValue method.
-// Tips:
-// - You can use the distance to the end_node for the h value.
-// - Node objects have a distance method to determine the distance to another node.
-
+// - Call distance method of Node to determine the distance to another node.
 float RoutePlanner::CalculateHValue(RouteModel::Node const *node) {
-
+    float dist = node->distance(*(this->end_node));
+    std::cout << "Distance to other node : " << dist << "\n";
+    return dist; 
 }
 
 
