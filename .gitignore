@@ -7,3 +7,5 @@ build/
 bin/
 lib/
 .vscode/
+.idea/
+cmake-build-debug/
